@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(TArobot_one)
+project(tarobot_one)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
