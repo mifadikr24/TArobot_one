@@ -33,8 +33,8 @@ if(BUILD_TESTING)
 endif()
 
 install(
-  DIRECTORY config description launch worlds
-  DESTINATION share/${PROJECT_NAME}
+  DIRECTORY config description launch worlds rviz
+  DESTINATION share/${PROJECT_NAME}/
 )
 
 ament_package()

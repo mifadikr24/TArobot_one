@@ -1,0 +1,667 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <material name="silver">
+        <color rgba="0.700 0.700 0.700 1.000"/>
+    </material>
+
+    <material name="gold" >
+        <color rgba="0.859 0.706 0.047 1.000"/>
+    </material>
+
+    <material name="blue">
+        <color rgba="0.200 0.200 1.000 1.000"/>
+    </material>
+
+    <material name="black">
+        <color rgba="0.000 0.000 0.000 1.000"/>
+    </material>
+
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0.0004534005037783145 1.5909157251835434e-17 0.06350000000000001" rpy="0 0 0"/>
+      <mass value="0.16978896000000002"/>
+      <inertia ixx="0.000417" iyy="0.001056" izz="0.001473" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.005" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.005" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="base_spacer0_1">
+    <inertial>
+      <origin xyz="0.11500000000000003 -0.059999999999999984 -0.045" rpy="0 0 0"/>
+      <mass value="0.014411009129134586"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="0.0" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0 -0.0 -0.138" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/base_spacer0_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="gold"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0 -0.0 -0.138" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/base_spacer0_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="base_spacer1_1">
+    <inertial>
+      <origin xyz="0.11500000000000007 0.06000000000000001 -0.04499999999999993" rpy="0 0 0"/>
+      <mass value="0.014411009129134586"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0 -0.0 -0.138" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/base_spacer1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="gold"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0 -0.0 -0.138" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/base_spacer1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="base_spacer2_1">
+    <inertial>
+      <origin xyz="-0.11500000000000014 -0.059999999999999984 -0.045" rpy="0 0 0"/>
+      <mass value="0.014411009129134586"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="0.0" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0 0.0 -0.135" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/base_spacer2_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="gold"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 -0.135" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/base_spacer2_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="base_spacer3_1">
+    <inertial>
+      <origin xyz="-0.11500000000000014 0.06000000000000001 -0.04500000000000001" rpy="0 0 0"/>
+      <mass value="0.014411009129134586"/>
+      <inertia ixx="2e-06" iyy="2e-06" izz="0.0" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0 -0.0 -0.138" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/base_spacer3_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="gold"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0 -0.0 -0.138" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/base_spacer3_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="motor0_1">
+    <inertial>
+      <origin xyz="0.1099441146827852 -0.06509267692643951 -0.08000000000000002" rpy="0 0 0"/>
+      <mass value="0.10137183175478615"/>
+      <inertia ixx="1.2e-05" iyy="3.3e-05" izz="3e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0 -0.0 -0.135" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/motor0_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0 -0.0 -0.135" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/motor0_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="motor1_1">
+    <inertial>
+      <origin xyz="0.10994411468280076 0.06509267692643958 -0.08000000000000004" rpy="0 0 0"/>
+      <mass value="0.101371831754786"/>
+      <inertia ixx="1.2e-05" iyy="3.3e-05" izz="3e-05" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0 -0.0 -0.135" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/motor1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0 -0.0 -0.135" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/motor1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="motor2_1">
+    <inertial>
+      <origin xyz="-0.09994411468278525 -0.06509267692643964 -0.08" rpy="0 0 0"/>
+      <mass value="0.10137183175478613"/>
+      <inertia ixx="1.2e-05" iyy="3.3e-05" izz="3e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0 -0.0 -0.135" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/motor2_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0 -0.0 -0.135" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/motor2_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="motor3_1">
+    <inertial>
+      <origin xyz="-0.0999441146828008 0.06509267692643958 -0.08000000000000006" rpy="0 0 0"/>
+      <mass value="0.101371831754786"/>
+      <inertia ixx="1.2e-05" iyy="3.3e-05" izz="3e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0 -0.0 -0.135" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/motor3_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin xyz="0.0 -0.0 -0.135" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/motor3_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roda0_1">
+    <inertial>
+      <origin xyz="2.5532032683905914e-07 -0.017499790047288244 -1.3877787807814457e-17" rpy="0 0 0"/>
+      <mass value="0.2556471021858694"/>
+      <inertia ixx="0.000186" iyy="0.00032" izz="0.000186" ixy="0.0" iyz="0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.101978 0.080803 -0.055" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/roda0_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.101978 0.080803 -0.055" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/roda0_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roda1_1">
+    <inertial>
+      <origin xyz="2.5532032692232587e-07 0.017499790047288244 -4.85722573273506e-17" rpy="0 0 0"/>
+      <mass value="0.2556471021858694"/>
+      <inertia ixx="0.000186" iyy="0.00032" izz="0.000186" ixy="0.0" iyz="0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.101978 -0.080803 -0.055" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/roda1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.101978 -0.080803 -0.055" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/roda1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roda2_1">
+    <inertial>
+      <origin xyz="-2.553203268945703e-07 -0.017499790047288258 -4.163336342344337e-17" rpy="0 0 0"/>
+      <mass value="0.2556471021858694"/>
+      <inertia ixx="0.000186" iyy="0.00032" izz="0.000186" ixy="0.0" iyz="0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.091978 0.080803 -0.055" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/roda2_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <origin xyz="0.091978 0.080803 -0.055" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/roda2_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="roda3_1">
+    <inertial>
+      <origin xyz="-2.5532032695008144e-07 0.017499790047288175 -4.163336342344337e-17" rpy="0 0 0"/>
+      <mass value="0.25564710218586933"/>
+      <inertia ixx="0.000186" iyy="0.00032" izz="0.000186" ixy="0.0" iyz="0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.091978 -0.080803 -0.055" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/roda3_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <origin xyz="0.091978 -0.080803 -0.055" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/roda3_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="mid_plate_1">
+    <inertial>
+      <origin xyz="0.23700000000000002 0.11999999999999998 -0.06349999999999996" rpy="0 0 0"/>
+      <mass value="0.21597839999999996"/>
+      <inertia ixx="0.000735" iyy="0.00162" izz="0.002354" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.23 0.12 -0.175" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/mid_plate_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <origin xyz="0.23 0.12 -0.175" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/mid_plate_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="mid_spacer0_1">
+    <inertial>
+      <origin xyz="0.028000000000000073 -0.07000000000000012 -0.05500000000000008" rpy="0 0 0"/>
+      <mass value="0.036027522822836444"/>
+      <inertia ixx="3e-05" iyy="3e-05" izz="0.0" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+   </inertial>
+    <visual>
+      <origin xyz="-0.014 -0.0 -0.218" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/mid_spacer0_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="gold"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.014 -0.0 -0.218" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/mid_spacer0_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="mid_spacer1_1">
+    <inertial>
+      <origin xyz="0.027999999999999997 0.06999999999999998 -0.05499999999999991" rpy="0 0 0"/>
+      <mass value="0.036027522822836444"/>
+      <inertia ixx="3e-05" iyy="3e-05" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.014 -0.0 -0.218" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/mid_spacer1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="gold"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.014 -0.0 -0.218" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/mid_spacer1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="mid_spacer2_1">
+    <inertial>
+      <origin xyz="-0.10699999999999998 -0.07000000000000005 -0.054999999999999966" rpy="0 0 0"/>
+      <mass value="0.03602752282283651"/>
+      <inertia ixx="3e-05" iyy="3e-05" izz="0.0" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.014 -0.0 -0.218" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/mid_spacer2_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="gold"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.014 -0.0 -0.218" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/mid_spacer2_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="mid_spacer3_1">
+    <inertial>
+      <origin xyz="-0.10700000000000001 0.07 -0.05499999999999991" rpy="0 0 0"/>
+      <mass value="0.03602752282283651"/>
+      <inertia ixx="3e-05" iyy="3e-05" izz="0.0" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.014 -0.0 -0.218" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/mid_spacer3_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="gold"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.014 -0.0 -0.218" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/mid_spacer3_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="top_plate_1">
+    <inertial>
+      <origin xyz="0.16100000000000012 0.13999999999999999 -0.1064999999999999" rpy="0 0 0"/>
+      <mass value="0.10905840000000025"/>
+      <inertia ixx="0.000295" iyy="0.000263" izz="0.000557" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.186 0.14 -0.321" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/top_plate_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    <material name="blue"/>
+    </visual>
+    <collision>
+      <origin xyz="0.186 0.14 -0.321" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/top_plate_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="ld_spacer0_1">
+    <inertial>
+      <origin xyz="0.08500000000000005 0.01499999999999998 -0.2055000000000001" rpy="0 0 0"/>
+      <mass value="0.00180137614114182"/>
+      <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.05 0.0 -0.424" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/ld_spacer0_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="gold"/>
+    </visual>
+    <collision>
+      <origin xyz="0.05 0.0 -0.424" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/ld_spacer0_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="ld_spacer1_1">
+    <inertial>
+      <origin xyz="0.05500000000000008 -0.015000000000000038 -0.2055000000000001" rpy="0 0 0"/>
+      <mass value="0.00180137614114182"/>
+      <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.05 0.0 -0.424" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/ld_spacer1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="gold"/>
+    </visual>
+    <collision>
+      <origin xyz="0.05 0.0 -0.424" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/ld_spacer1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="lidar_base_1">
+    <inertial>
+      <origin xyz="-0.049999999999999975 -0.030000000000000023 -0.19850000000000018" rpy="0 0 0"/>
+      <mass value="0.03914309847770376"/>
+      <inertia ixx="7e-06" iyy="7e-06" izz="1.1e-05" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+    <origin xyz="-0.07 -0.03 -0.432" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/lidar_base_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.07 -0.03 -0.432" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/lidar_base_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="lidar_top_1">
+    <inertial>
+      <origin xyz="1.3877787807814457e-17 -2.4451532977709013e-17 0.007499999999999535" rpy="0 0 0"/>
+      <mass value="0.013738970072311568"/>
+      <inertia ixx="1e-06" iyy="1e-06" izz="2e-06" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.02 0.0 -0.246" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/lidar_top_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.02 0.0 -0.246" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/lidar_top_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="camera_1">
+    <inertial>
+      <origin xyz="0.126302325032354 -2.3411951108266635e-14 -0.09499999995795338" rpy="0 0 0"/>
+      <mass value="0.023371389336088035"/>
+      <inertia ixx="8e-06" iyy="2e-06" izz="8e-06" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.014 -0.0 -0.218" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.014 -0.0 -0.218" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://tarobot_one/description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="spacer0base" type="fixed">
+    <origin xyz="0.0 0.0 0.133" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="base_spacer0_1"/>
+  </joint>
+
+  <joint name="spacer1base" type="fixed">
+    <origin xyz="0.0 0.0 0.133" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="base_spacer1_1"/>
+  </joint>
+
+  <joint name="spacer2base" type="fixed">
+    <origin xyz="0.0 0.0 0.13" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="base_spacer2_1"/>
+  </joint>
+
+  <joint name="spacer3base" type="fixed">
+    <origin xyz="0.0 0.0 0.133" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="base_spacer3_1"/>
+  </joint>
+
+  <joint name="motor0base" type="fixed">
+    <origin xyz="0.0 0.0 0.13" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="motor0_1"/>
+  </joint>
+
+  <joint name="motor1base" type="fixed">
+    <origin xyz="0.0 0.0 0.13" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="motor1_1"/>
+  </joint>
+
+  <joint name="motor2base" type="fixed">
+    <origin xyz="0.0 0.0 0.13" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="motor2_1"/>
+  </joint>
+
+  <joint name="motor3base" type="fixed">
+    <origin xyz="0.0 0.0 0.13" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="motor3_1"/>
+  </joint>
+
+  <joint name="roda0motor0" type="continuous">
+    <origin xyz="0.101978 -0.080803 -0.08" rpy="0 0 0"/>
+    <parent link="motor0_1"/>
+    <child link="roda0_1"/>
+    <axis xyz="-0.0 1.0 -0.0"/>
+  </joint>
+
+  <joint name="roda1motor1" type="continuous">
+    <origin xyz="0.101978 0.080803 -0.08" rpy="0 0 0"/>
+    <parent link="motor1_1"/>
+    <child link="roda1_1"/>
+    <axis xyz="-0.0 1.0 0.0"/>
+  </joint>
+
+  <joint name="roda2motor2" type="continuous">
+    <origin xyz="-0.091978 -0.080803 -0.08" rpy="0 0 0"/>
+    <parent link="motor2_1"/>
+    <child link="roda2_1"/>
+    <axis xyz="0.0 1.0 0.0"/>
+  </joint>
+
+  <joint name="roda3motor3" type="continuous">
+    <origin xyz="-0.091978 0.080803 -0.08" rpy="0 0 0"/>
+    <parent link="motor3_1"/>
+    <child link="roda3_1"/>
+    <axis xyz="-0.0 1.0 0.0"/>
+  </joint>
+
+  <joint name="midbase_spacer2" type="fixed">
+    <origin xyz="-0.23 -0.12 0.04" rpy="0 0 0"/>
+    <parent link="base_spacer2_1"/>
+    <child link="mid_plate_1"/>
+  </joint>
+
+  <joint name="mid_spacer0mid" type="fixed">
+    <origin xyz="0.244 0.12 0.043" rpy="0 0 0"/>
+    <parent link="mid_plate_1"/>
+    <child link="mid_spacer0_1"/>
+  </joint>
+
+  <joint name="mid_spacer1mid" type="fixed">
+    <origin xyz="0.244 0.12 0.043" rpy="0 0 0"/>
+    <parent link="mid_plate_1"/>
+    <child link="mid_spacer1_1"/>
+  </joint>
+
+  <joint name="mid_spacer2mid" type="fixed">
+    <origin xyz="0.244 0.12 0.043" rpy="0 0 0"/>
+    <parent link="mid_plate_1"/>
+    <child link="mid_spacer2_1"/>
+  </joint>
+
+  <joint name="mid_spacer3mid" type="fixed">
+    <origin xyz="0.244 0.12 0.043" rpy="0 0 0"/>
+    <parent link="mid_plate_1"/>
+    <child link="mid_spacer3_1"/>
+  </joint>
+
+  <joint name="topmid_spacer2" type="fixed">
+    <origin xyz="-0.2 -0.14 0.103" rpy="0 0 0"/>
+    <parent link="mid_spacer2_1"/>
+    <child link="top_plate_1"/>
+  </joint>
+
+  <joint name="ld_spacer0top" type="fixed">
+    <origin xyz="0.136 0.14 0.103" rpy="0 0 0"/>
+    <parent link="top_plate_1"/>
+    <child link="ld_spacer0_1"/>
+  </joint>
+
+  <joint name="ld_spacer1top" type="fixed">
+    <origin xyz="0.136 0.14 0.103" rpy="0 0 0"/>
+    <parent link="top_plate_1"/>
+    <child link="ld_spacer1_1"/>
+  </joint>
+
+  <joint name="ld_baseld_spacer0" type="fixed">
+    <origin xyz="0.12 0.03 0.008" rpy="0 0 0"/>
+    <parent link="ld_spacer0_1"/>
+    <child link="lidar_base_1"/>
+  </joint>
+
+  <joint name="ld_topld_base" type="continuous">
+    <origin xyz="-0.05 -0.03 -0.186" rpy="0 0 0"/>
+    <parent link="lidar_base_1"/>
+    <child link="lidar_top_1"/>
+    <axis xyz="0.0 -0.0 -1.0"/>
+  </joint>
+
+  <joint name="cameramid" type="fixed">
+    <origin xyz="0.244 0.12 0.043" rpy="0 0 0"/>
+    <parent link="mid_plate_1"/>
+    <child link="camera_1"/>
+  </joint>
+
+</robot>
