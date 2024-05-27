@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="robot">
 
-    <xacro:include filename="$(find tarobot_one)/description/urdf/my_robot1.xacro" />
+    <xacro:include filename="$(find tarobot_one)/description/urdf/my_robot.xacro" />
     <xacro:include filename="$(find tarobot_one)/description/urdf/properties.xacro" />
     
     <xacro:include filename="$(find tarobot_one)/description/urdf/camera.xacro" />

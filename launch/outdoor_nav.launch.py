@@ -10,9 +10,9 @@ from ament_index_python.packages import get_package_share_path
 def generate_launch_description():
 
     rviz_config_path = os.path.join(get_package_share_path('tarobot_one'),
-                             'rviz', 'teleop_sim.rviz')
+                             'rviz', 'nav2_sim.rviz')
     world = os.path.join(get_package_share_path('tarobot_one'),'worlds','outdoor_sim.world')
-    
+
     rsp = IncludeLaunchDescription(
             PythonLaunchDescriptionSource([os.path.join(
                 get_package_share_path('tarobot_one'),'launch','rsp.launch.py'
@@ -38,7 +38,6 @@ def generate_launch_description():
     )
                         
     return LaunchDescription([
-        #robot_state_publisher_node,
         rsp,
         gazebo_world,
         spawn_entity,
