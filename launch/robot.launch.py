@@ -22,6 +22,9 @@ def generate_launch_description():
 
     package_name='tarobot_one' #<--- CHANGE ME
 
+    rviz_config_path = os.path.join(get_package_share_directory(package_name),
+                             'rviz', 'teleop_sim.rviz')
+    
     rsp = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory(package_name),'launch','rsp.launch.py'
@@ -44,7 +47,7 @@ def generate_launch_description():
 
     robot_description = Command(['ros2 param get --hide-type /robot_state_publisher robot_description'])
 
-    controller_params_file = os.path.join(get_package_share_directory(package_name),'config','my_controllers.yaml')
+    controller_params_file = os.path.join(get_package_share_directory(package_name),'config','4wheel_controllers.yaml')
 
     controller_manager = Node(
         package="controller_manager",
@@ -81,6 +84,11 @@ def generate_launch_description():
         )
     )
 
+    rviz2_node = Node(
+        package="rviz2",
+        executable="rviz2",
+        arguments=['-d', rviz_config_path]
+    )
 
     # Code for delaying a node (I haven't tested how effective it is)
     # 
@@ -98,8 +106,6 @@ def generate_launch_description():
     #
     # Replace the diff_drive_spawner in the final return with delayed_diff_drive_spawner
 
-
-
     # Launch them all!
     return LaunchDescription([
         rsp,
@@ -107,5 +113,6 @@ def generate_launch_description():
         twist_mux,
         delayed_controller_manager,
         delayed_diff_drive_spawner,
-        delayed_joint_broad_spawner
+        delayed_joint_broad_spawner,
+        rviz2_node
     ])
