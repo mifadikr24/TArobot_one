@@ -1,11 +1,19 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="robot">
 
+    <xacro:arg name="use_ros2_control" default="false"/>
+    <xacro:arg name="sim_mode" default="true"/>
+
     <xacro:include filename="$(find tarobot_one)/description/urdf/my_robot.xacro" />
-    <xacro:include filename="$(find tarobot_one)/description/urdf/properties.xacro" />
     
     <xacro:include filename="$(find tarobot_one)/description/urdf/camera.xacro" />
     <xacro:include filename="$(find tarobot_one)/description/urdf/lidar_ld19.xacro" />
-    <xacro:include filename="$(find tarobot_one)/description/urdf/4wheel_diff.xacro" />
+
+    <xacro:if value="$(arg use_ros2_control)">
+        <xacro:include filename="ros2_control.xacro" />
+    </xacro:if>
+    <xacro:unless value="$(arg use_ros2_control)">
+        <xacro:include filename="4wheel_diff.xacro" />
+    </xacro:unless>
 
 </robot>
