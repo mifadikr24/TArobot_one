@@ -22,8 +22,8 @@ def generate_launch_description():
 
     package_name='tarobot_one' #<--- CHANGE ME
 
-    rviz_config_path = os.path.join(get_package_share_directory(package_name),
-                             'rviz', 'teleop_sim.rviz')
+    #rviz_config_path = os.path.join(get_package_share_directory(package_name),
+    #                        'rviz', 'teleop_sim.rviz')
     
     rsp = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
@@ -84,11 +84,11 @@ def generate_launch_description():
         )
     )
 
-    rviz2_node = Node(
-        package="rviz2",
-        executable="rviz2",
-        arguments=['-d', rviz_config_path]
-    )
+    #rviz2_node = Node(
+    #    package="rviz2",
+    #    executable="rviz2",
+    #    arguments=['-d', rviz_config_path]
+    #)
 
     # Code for delaying a node (I haven't tested how effective it is)
     # 
@@ -114,5 +114,5 @@ def generate_launch_description():
         delayed_controller_manager,
         delayed_diff_drive_spawner,
         delayed_joint_broad_spawner,
-        rviz2_node
+        #rviz2_node
     ])
