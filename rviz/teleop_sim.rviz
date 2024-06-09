@@ -8,6 +8,7 @@ Panels:
         - /Grid1
         - /TF1
         - /RobotModel1
+        - /RobotModel1/Status1
         - /LaserScan1
         - /LaserScan1/Topic1
         - /Image1
@@ -66,19 +67,9 @@ Visualization Manager:
           Value: true
         camera_link_optical:
           Value: true
-        fl_wheel_link:
-          Value: true
-        fr_wheel_link:
-          Value: true
         lidar_link:
           Value: true
         mid_link:
-          Value: true
-        odom:
-          Value: true
-        rl_wheel_link:
-          Value: true
-        rr_wheel_link:
           Value: true
         top_link:
           Value: true
@@ -88,24 +79,15 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        odom:
-          base_footprint:
-            base_link:
-              mid_link:
-                camera_link:
-                  camera_link_optical:
-                    {}
-                top_link:
-                  lidar_link:
-                    {}
-            fl_wheel_link:
-              {}
-            fr_wheel_link:
-              {}
-            rl_wheel_link:
-              {}
-            rr_wheel_link:
-              {}
+        base_footprint:
+          base_link:
+            mid_link:
+              camera_link:
+                camera_link_optical:
+                  {}
+              top_link:
+                lidar_link:
+                  {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -190,21 +172,21 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 0.226065531373024
-        Min Value: 0.22598308324813843
+        Max Value: 0.17599999904632568
+        Min Value: 0.17599999904632568
         Value: true
       Axis: Z
       Channel Name: intensity
       Class: rviz_default_plugins/LaserScan
       Color: 255; 255; 255
-      Color Transformer: AxisColor
+      Color Transformer: Intensity
       Decay Time: 0
       Enabled: true
       Invert Rainbow: false
       Max Color: 255; 255; 255
-      Max Intensity: 0
+      Max Intensity: 240
       Min Color: 0; 0; 0
-      Min Intensity: 0
+      Min Intensity: 64
       Name: LaserScan
       Position Transformer: XYZ
       Selectable: true
@@ -238,7 +220,7 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: odom
+    Fixed Frame: base_link
     Frame Rate: 30
   Name: root
   Tools:
@@ -281,7 +263,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 29.724634170532227
+      Distance: 8.498953819274902
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -296,10 +278,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.5452020764350891
+      Pitch: 1.025201678276062
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 2.404973268508911
+      Yaw: 0.3799758553504944
     Saved: ~
 Window Geometry:
   Displays:
