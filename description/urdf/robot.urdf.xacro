@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="robot">
 
-    <xacro:arg name="use_ros2_control" default="false"/>
-    <xacro:arg name="sim_mode" default="true"/>
+    <xacro:arg name="use_ros2_control" default="true"/>
+    <xacro:arg name="sim_mode" default="false"/>
 
     <xacro:include filename="$(find tarobot_one)/description/urdf/my_robot.xacro" />
     
