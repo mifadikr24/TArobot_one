@@ -5,6 +5,7 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
+        - /Status1
         - /Grid1
         - /TF1
         - /RobotModel1
@@ -92,25 +93,24 @@ Visualization Manager:
       Show Names: true
       Tree:
         map:
-          {}
-        odom:
-          base_footprint:
-            base_link:
-              mid_link:
-                camera_link:
-                  camera_link_optical:
-                    {}
-                top_link:
-                  lidar_link:
-                    {}
-            fl_wheel_link:
-              {}
-            fr_wheel_link:
-              {}
-            rl_wheel_link:
-              {}
-            rr_wheel_link:
-              {}
+          odom:
+            base_footprint:
+              base_link:
+                mid_link:
+                  camera_link:
+                    camera_link_optical:
+                      {}
+                  top_link:
+                    lidar_link:
+                      {}
+              fl_wheel_link:
+                {}
+              fr_wheel_link:
+                {}
+              rl_wheel_link:
+                {}
+              rr_wheel_link:
+                {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -195,8 +195,8 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 0.22612322866916656
-        Min Value: 0.22595475614070892
+        Max Value: 0.22610753774642944
+        Min Value: 0.22588658332824707
         Value: true
       Axis: Z
       Channel Name: intensity
@@ -307,7 +307,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 25.552230834960938
+      Distance: 17.11595344543457
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -322,10 +322,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.3497965335845947
+      Pitch: 1.0347964763641357
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.0099711325019598
+      Yaw: 2.4849703311920166
     Saved: ~
 Window Geometry:
   Displays:
